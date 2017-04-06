@@ -18,43 +18,45 @@ MVP很好的解决了这种情况。这个示例中会体现出来。
 
 Model层	
 	
-	//必须继承自Bean，否则下面的Presenter传入的泛型会报错（做了泛型限定）
-	public class PicClassifyBean extends Bean{
+```//必须继承自Bean，否则下面的Presenter传入的泛型会报错（做了泛型限定）
+public class PicClassifyBean extends Bean{
 
-	}
+}
+```
 
 Model层(HttpModel不用管，类库中已经写好了直接使用就可以（严格来说这块应该属于Presenter层。我分离了出来，而且划到了Model层中）)
 
-	//MainPresenter 泛型控制mPresenter的类型，方便直接调用MainPresenter的方法
-	public class PicClassifyModel extends HttpModel<MainPresenter>{
-		public void getPicClassify(){
-			TianGouApi tianGouApi = MainApp.getTianGouApi();
-        	tianGouApi.getRxPicClassify()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<PicClassifyBean>() {
-                    @Override
-                    public void onSubscribe(Disposable d) {
-                        mPresenter.onHttpStart();
-                    }
+```//MainPresenter 泛型控制mPresenter的类型，方便直接调用MainPresenter的方法
+public class PicClassifyModel extends HttpModel<MainPresenter>{
+	public void getPicClassify(){
+		TianGouApi tianGouApi = MainApp.getTianGouApi();
+	tianGouApi.getRxPicClassify()
+	.subscribeOn(Schedulers.io())
+	.observeOn(AndroidSchedulers.mainThread())
+	.subscribe(new Observer<PicClassifyBean>() {
+	    @Override
+	    public void onSubscribe(Disposable d) {
+		mPresenter.onHttpStart();
+	    }
 
-                    @Override
-                    public void onNext(PicClassifyBean picClassifyBean) {
-                        mPresenter.onHttpSuccess(picClassifyBean);
-                    }
+	    @Override
+	    public void onNext(PicClassifyBean picClassifyBean) {
+		mPresenter.onHttpSuccess(picClassifyBean);
+	    }
 
-                    @Override
-                    public void onError(Throwable e) {
-                        mPresenter.onHttpFaild(e);
-                    }
+	    @Override
+	    public void onError(Throwable e) {
+		mPresenter.onHttpFaild(e);
+	    }
 
-                    @Override
-                    public void onComplete() {
-                        Log.i(TAG, "onComplete: ");
-                    }
-                });
-		}
+	    @Override
+	    public void onComplete() {
+		Log.i(TAG, "onComplete: ");
+	    }
+	});
 	}
+}
+```
 
 Presenter层(HttpPresenter不用管，类库中已经写好了直接使用就可以)
 	
