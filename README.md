@@ -111,8 +111,6 @@ public class MainActivity extends AppCompatActivity implements IHttpView<PicClas
 
 结束语：设计思想、代码有什么不好的地方欢迎大家指出，一起进步。也欢迎大家多点几颗星，给点动力，写出更好更优的代码。
 
-
-####Auther: 陈占洋
-####Email: zhanyang.chen@gmail.com
+ #### Email: zhanyang.chen@gmail.com
 
 
