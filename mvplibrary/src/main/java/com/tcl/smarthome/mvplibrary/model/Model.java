@@ -13,7 +13,7 @@ public class Model<P extends Presenter> {
 
     protected P mPresenter;
 
-    public void setPresenter(P p){
+    public void bindPresenter(P p){
         mPresenter = p;
     }
 }

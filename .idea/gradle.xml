@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mvplibrary" />
+            <option value="$PROJECT_DIR$/mvpsample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

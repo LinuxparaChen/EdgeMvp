@@ -8,7 +8,6 @@ import com.tcl.smarthome.mvplibrary.presenter.HttpPresenter;
  * Data: 2017/3/15.
  */
 
-public abstract class HttpModel<P extends HttpPresenter> extends Model<P>{
+public class HttpModel<P extends HttpPresenter> extends Model<P>{
 
-    public abstract void fetchData(Object... params);
 }

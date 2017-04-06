@@ -26,7 +26,7 @@ public class Presenter<M extends Model,V extends IView> {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());
         }
-        mModel.setPresenter(this);
+        mModel.bindPresenter(this);
     }
 
     /**
