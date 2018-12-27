@@ -1,13 +1,13 @@
-package com.linuxpara.edgemvp.login;
+package com.linuxpara.edgemvp_example.login;
 
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 
-import com.linuxpara.edgemvp.login.view.login.ILoginView;
 import com.linuxpara.edgemvp_annotation.ExtractItf;
 import com.linuxpara.edgemvp_annotation.MvpPresenter;
-import com.linuxpara.edgemvp_reflect.EdgeMvp;
+import com.linuxpara.edgemvp.EdgeMvp;
+import com.linuxpara.edgemvp_example.login.view.login.ILoginView;
 
 /**
  * Date: 2018/12/26

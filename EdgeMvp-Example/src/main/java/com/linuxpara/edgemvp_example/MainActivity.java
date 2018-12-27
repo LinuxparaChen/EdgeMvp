@@ -1,12 +1,12 @@
-package com.linuxpara.edgemvp;
+package com.linuxpara.edgemvp_example;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.linuxpara.edgemvp.list.ListActivity;
-import com.linuxpara.edgemvp.login.LoginActivity;
+import com.linuxpara.edgemvp_example.list.ListActivity;
+import com.linuxpara.edgemvp_example.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

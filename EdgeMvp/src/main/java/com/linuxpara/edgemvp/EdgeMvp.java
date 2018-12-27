@@ -1,4 +1,4 @@
-package com.linuxpara.edgemvp_reflect;
+package com.linuxpara.edgemvp;
 
 import com.linuxpara.edgemvp_annotation.MvpPresenter;
 import com.linuxpara.edgemvp_annotation.MvpView;

@@ -37,7 +37,7 @@ dependencies {
 
 publish {
     userOrg = ''
-    groupId = 'com.linuxpara.edgemvp_reflect'
+    groupId = 'com.linuxpara.edgemvp'
     artifactId = 'EdgeMvp'
     publishVersion = '1.0.1'
     desc = '一个MVP架构利器。自动生成接口文件，且不需要实现接口。'

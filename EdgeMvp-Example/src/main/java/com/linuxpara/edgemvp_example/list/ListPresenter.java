@@ -1,4 +1,4 @@
-package com.linuxpara.edgemvp.list;
+package com.linuxpara.edgemvp_example.list;
 
 /**
  * Date: 2018/12/26

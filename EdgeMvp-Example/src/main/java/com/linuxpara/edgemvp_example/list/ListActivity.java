@@ -1,9 +1,10 @@
-package com.linuxpara.edgemvp.list;
+package com.linuxpara.edgemvp_example.list;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.linuxpara.edgemvp.R;
+import com.linuxpara.edgemvp_example.R;
+
 
 public class ListActivity extends AppCompatActivity {
 

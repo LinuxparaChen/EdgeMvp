@@ -1,15 +1,15 @@
-package com.linuxpara.edgemvp.login;
+package com.linuxpara.edgemvp_example.login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.linuxpara.edgemvp.R;
-import com.linuxpara.edgemvp.login.presenter.login.ILoginPresenter;
 import com.linuxpara.edgemvp_annotation.ExtractItf;
 import com.linuxpara.edgemvp_annotation.MvpView;
-import com.linuxpara.edgemvp_reflect.EdgeMvp;
+import com.linuxpara.edgemvp.EdgeMvp;
+import com.linuxpara.edgemvp_example.R;
+import com.linuxpara.edgemvp_example.login.presenter.login.ILoginPresenter;
 
 @MvpView(key = "Login", presenter = LoginPresenter.class)
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
