@@ -21,10 +21,9 @@ public class JavaFileUtil {
     /**
      * 生成java文件
      *
-     * @param pkg  包名
-     * @param spec java文件描述
-     * @param filer
-     * @return
+     * @param pkg   包名
+     * @param spec  java文件描述
+     * @param filer 文件
      */
     public static void generateJavaFile(String pkg, TypeSpec spec, Filer filer) {
 

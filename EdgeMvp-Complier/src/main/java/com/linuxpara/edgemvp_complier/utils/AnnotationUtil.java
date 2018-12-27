@@ -24,7 +24,7 @@ public class AnnotationUtil {
      * @param element    被注解修饰的元素
      * @param annotation 注解
      * @param key        要获取注解的值对应的键
-     * @return
+     * @return 注解的值
      */
     public static String getAnnotationValue(Element element, Class<? extends Annotation> annotation, String key) {
         //参数不能为空

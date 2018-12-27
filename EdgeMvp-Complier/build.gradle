@@ -1,10 +1,21 @@
 apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.auto.service:auto-service:1.0-rc2'
     implementation 'com.squareup:javapoet:1.7.0'
-    implementation project(':EdgeMvp-Annotation')
+
+    api project(':EdgeMvp-Annotation')
+}
+
+publish {
+    userOrg = ''
+    groupId = 'com.linuxpara.edgemvp_complier'
+    artifactId = 'EdgeMvp'
+    publishVersion = '1.0.1'
+    desc = 'EdgeMvp的注解处理器'
+    website = 'https://github.com/LinuxparaChen/EdgeMvp/'
 }
 
 sourceCompatibility = "1.7"
