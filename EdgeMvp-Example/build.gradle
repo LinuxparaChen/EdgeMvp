@@ -25,12 +25,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-
-//    implementation 'com.linuxpara.edgemvp_reflect:EdgeMvp:1.0.0'
-//    annotationProcessor 'com.linuxpara.edgemvp_complier:EdgeMvp-Complier:1.0.0'
-//    implementation project(':EdgeMvp-Annotation')
-    implementation project(':EdgeMvp')
-    annotationProcessor project(':EdgeMvp-Complier')
+    implementation 'com.linuxpara:edgemvp:1.0.1'
+    annotationProcessor 'com.linuxpara:edgemvp-complier:1.0.1'
+//    implementation project(':EdgeMvp')
+//    annotationProcessor project(':EdgeMvp-Complier')
 
 }
 

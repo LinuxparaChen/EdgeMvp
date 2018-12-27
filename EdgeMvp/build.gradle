@@ -32,13 +32,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    api project(':EdgeMvp-Annotation')
+    api 'com.linuxpara:edgemvp-annotation:1.0.0'
 }
 
 publish {
     userOrg = ''
-    groupId = 'com.linuxpara.edgemvp'
-    artifactId = 'EdgeMvp'
+    groupId = 'com.linuxpara'
+    artifactId = 'edgemvp'
     publishVersion = '1.0.1'
     desc = '一个MVP架构利器。自动生成接口文件，且不需要实现接口。'
     website = 'https://github.com/LinuxparaChen/EdgeMvp/'
