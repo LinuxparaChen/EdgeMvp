@@ -1,5 +1,4 @@
 apply plugin: 'java-library'
-apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -9,14 +8,8 @@ dependencies {
     api 'com.linuxpara:edgemvp-annotation:1.0.0'
 }
 
-publish {
-    userOrg = ''
-    groupId = 'com.linuxpara'
-    artifactId = 'edgemvp-complier'
-    publishVersion = '1.0.1'
-    desc = 'EdgeMvp的注解处理器'
-    website = 'https://github.com/LinuxparaChen/EdgeMvp/'
-}
-
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+ext.set("Module","EdgeMvp-Complier")
+apply from: rootProject.file('bintray_publish.gradle')

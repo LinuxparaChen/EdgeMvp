@@ -3,6 +3,7 @@
 /gradle
 /.idea
 /local.properties
+/bintray_publish.properties
 .DS_Store
 /build
 /captures

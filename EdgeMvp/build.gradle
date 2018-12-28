@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -35,11 +34,5 @@ dependencies {
     api 'com.linuxpara:edgemvp-annotation:1.0.0'
 }
 
-publish {
-    userOrg = ''
-    groupId = 'com.linuxpara'
-    artifactId = 'edgemvp'
-    publishVersion = '1.0.1'
-    desc = '一个MVP架构利器。自动生成接口文件，且不需要实现接口。'
-    website = 'https://github.com/LinuxparaChen/EdgeMvp/'
-}
+ext.set("Module","EdgeMvp")
+apply from: rootProject.file('bintray_publish.gradle')

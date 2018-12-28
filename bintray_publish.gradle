@@ -1,0 +1,51 @@
+apply plugin: 'com.novoda.bintray-release'
+
+String module = ext.get("Module")
+
+Properties properties = new Properties()
+properties.load(rootProject.file("bintray_publish.properties").newDataInputStream())
+
+
+String user = properties.getProperty("bintray.user")
+String key = properties.getProperty("bintray.key")
+
+String group_id = properties.getProperty("bintray.groupId")
+
+String artifact_id = ''
+String publish_version = ''
+boolean dry_run = true
+
+if ("EdgeMvp".equals(module)) {
+
+    artifact_id = properties.getProperty("bintray.edgemvp.artifactId")
+    publish_version = properties.getProperty("bintray.edgemvp.version")
+    dry_run = !Boolean.parseBoolean(properties.get("bintray.edgemvp.upload"))
+
+} else if ("EdgeMvp-Complier".equals(module)) {
+
+    artifact_id = properties.getProperty("bintray.edgemvp-complier.artifactId")
+    publish_version = properties.getProperty("bintray.edgemvp-complier.version")
+    dry_run = !Boolean.parseBoolean(properties.get("bintray.edgemvp-complier.upload"))
+
+} else if ("EdgeMvp-Annotation".equals(module)) {
+
+    artifact_id = properties.getProperty("bintray.edgemvp-annotation.artifactId")
+    publish_version = properties.getProperty("bintray.edgemvp-annotation.version")
+    dry_run = !Boolean.parseBoolean(properties.get("bintray.edgemvp-annotation.upload"))
+
+}
+
+
+publish {
+
+    userOrg = ''
+    bintrayUser = user
+    bintrayKey = key
+    groupId = group_id
+    artifactId = artifact_id
+    publishVersion = publish_version
+    desc = '一个MVP架构利器。自动生成接口文件，且不需要实现接口。'
+    website = 'https://github.com/LinuxparaChen/EdgeMvp/'
+    dryRun = dry_run
+
+}

@@ -9,7 +9,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
         classpath 'com.novoda:bintray-release:0.9'
-//      ./gradlew clean build bintrayUpload -PbintrayUser=linuxparachen -PbintrayKey= -PdryRun=false
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,8 +19,22 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven{ url 'https://dl.bintray.com/linuxparachen/maven'}
     }
+}
+
+ext{
+    bintray_user='linuxparachen'
+    bintray_key='1b4dad266bcb94dd5e290c6c3312fad2792c5205'
+
+    bintray_groupId='com.linuxpara'
+
+    bintray_edgemvp_artifactId='edgemvp'
+    bintray_edgemvp_complier_artifactId='edgemvp-complier'
+    bintray_edgemvp_annotation_artifactId='edgemvp-annotation'
+
+//    bintray.edgemvp.version='1.0.2'
+//    bintray.edgemvp-complier.version='1.0.2'
+//    bintray.edgemvp-annotation.version='1.0.0'
 }
 
 task clean(type: Delete) {
