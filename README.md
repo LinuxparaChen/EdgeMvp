@@ -5,6 +5,14 @@
 - Presenter层使用@MvpView注解，标注为presenter。
 - 使用@ExtractItf注解标注方法，此方法将会被抽取到接口中。
 
+##### jcenter下载
+```
+dependencies {
+    implementation 'com.linuxpara:edgemvp:1.0.4'
+    annotationProcessor 'com.linuxpara:edgemvp-complier:1.0.4'
+}
+```
+
 ##### 使用方法：
 1. @MvpView使用
 
